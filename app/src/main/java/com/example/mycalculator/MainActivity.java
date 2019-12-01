@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnDivision;
     private Button btnMultiplication;
     private Button btnClear;
-    private Button btnPercentage;
     private TextView txtResult;
 
 
@@ -105,22 +104,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnPercentage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if((operand1.getText().length()>0) && (operand2.getText().length()>0)) {
-
-                    double oper1 = Double.parseDouble(operand1.getText().toString());
-                    double oper2 = Double.parseDouble(operand2.getText().toString());
-
-                    double theResult = oper1 * oper2;
-                    txtResult.setText(Double.toString(theResult));
-                } else {
-                    Toast.makeText(MainActivity.this, "Please enter numbers in both operand fields", Toast.LENGTH_LONG).show();
-
-                }
-            }
-        });
 
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
